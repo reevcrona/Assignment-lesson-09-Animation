@@ -1,0 +1,60 @@
+body{
+    margin:0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    animation: morning 10s ease-in-out;
+}
+
+.moon{
+    position: absolute;
+    opacity: 0;
+}
+.sun{
+    position: absolute;
+    opacity: 0;
+}
+
+.move-animation{
+    animation: move 10s linear;
+    animation-fill-mode: forwards;
+    opacity:0;
+}
+
+
+@keyframes morning{
+    0% {
+         background-color: #354a4a;
+    }
+    25% {
+        background-color: #e2b553;
+    }
+    40% {
+        background-color: #70c4c6; 
+    }
+    70% {
+        background-color: #354a4a; 
+    }
+    80% {
+        background-color: #2a3a5b; 
+    }
+    100% {
+        background-color: #524b64; 
+    }
+	
+}
+
+@keyframes move{
+    0%{
+        transform: translate(-470%,100%);
+        opacity: 1;
+    }
+    
+    100%{
+        transform: translate(530%,-140%);
+       opacity: 1;
+    }
+}
