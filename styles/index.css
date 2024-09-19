@@ -74,6 +74,18 @@ body{
     top: 17%;
     right: 23%;
 }
+.hide{
+    opacity: 0;
+
+}
+.show-header{
+    opacity: 1;
+}
+.gm{
+    animation: fadeInUp;
+    animation-duration: 2s;
+    transition: all 2s ease-in-out;
+}
 .show{
     animation: showStar 8s ease-in-out ;
 }
