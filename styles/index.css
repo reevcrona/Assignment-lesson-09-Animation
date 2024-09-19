@@ -6,7 +6,8 @@ body{
     justify-content: center;
     height: 100vh;
     overflow: hidden;
-    animation: morning 10s ease-in-out;
+    animation: dayNight 20s ease-in-out infinite;
+    animation-fill-mode: forwards;
 }
 
 .moon{
@@ -19,35 +20,75 @@ body{
 }
 
 .move-animation{
-    animation: move 10s linear;
+    animation: moveSunMoon 10s linear;
     animation-fill-mode: forwards;
     opacity:0;
 }
-
-
-@keyframes morning{
-    0% {
-         background-color: #354a4a;
-    }
-    25% {
-        background-color: #e2b553;
-    }
-    40% {
-        background-color: #70c4c6; 
-    }
-    70% {
-        background-color: #354a4a; 
-    }
-    80% {
-        background-color: #2a3a5b; 
-    }
-    100% {
-        background-color: #524b64; 
-    }
-	
+.morning{
+    animation: morning 10s ease-in-out;
+}
+.night{
+    animation: night 10s ease-in-out;
 }
 
-@keyframes move{
+.cloud{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.cloud:nth-child(3){
+   animation: moveCloud-one 35s infinite;
+   
+}
+.cloud:nth-child(4){
+    animation: moveCloud-two 25s  infinite;
+}
+.cloud:nth-child(5){
+    animation: moveCloud-three 30s linear infinite;
+    animation-delay: 3s;
+}
+.cloud:nth-child(6){
+    animation: moveCloud-four 25s linear infinite;
+    animation-delay: 5s;
+}
+.cloud:nth-child(7){
+    animation: moveCloud-four 35s linear infinite;
+    animation-delay: 8s;
+}
+.cloud:nth-child(8){
+    animation: moveCloud-four 35s linear infinite;
+    animation-delay: 10s;
+}
+@keyframes dayNight {
+    0% {
+        background-color: #354a4a; 
+    }
+    20% {
+        background-color: #e2b553; 
+    }
+    35% {
+        background-color: #70c4c6; 
+    }
+    60% {
+        background-color: #354a4a; 
+    }
+    75% {
+        background-color: #2a3a5b; 
+    }
+    90% {
+        background-color: #0f1a2a; 
+    }
+    100% {
+        background-color: #0f1a2a; 
+    }
+}
+
+
+
+
+@keyframes moveSunMoon{
     0%{
         transform: translate(-470%,100%);
         opacity: 1;
@@ -56,5 +97,47 @@ body{
     100%{
         transform: translate(530%,-140%);
        opacity: 1;
+    }
+}
+
+
+@keyframes moveCloud-one{
+    from{
+        opacity: 1;
+        transform: translate(-150%,30%);
+    }
+    to{
+        opacity: 1;
+        transform: translate(1300%,30%);
+    }
+}
+@keyframes moveCloud-two{
+    from{
+        opacity: 1;
+        transform: translate(-150%,70%);
+    }
+    to{
+        opacity: 1;
+        transform: translate(1300%,70%);
+    }
+}
+@keyframes moveCloud-three{
+    from{
+        opacity: 1;
+        transform: translate(-150%,-10%);
+    }
+    to{
+        opacity: 1;
+        transform: translate(1300%,-10%);
+    }
+}
+@keyframes moveCloud-four{
+    from{
+        opacity: 1;
+        transform: translate(-150%,85%);
+    }
+    to{
+        opacity: 1;
+        transform: translate(1300%,85%);
     }
 }
