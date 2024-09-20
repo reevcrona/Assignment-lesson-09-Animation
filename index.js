@@ -1,7 +1,7 @@
 const sun = document.querySelector(".sun");
 const moon = document.querySelector(".moon");
 const stars = document.querySelectorAll(".star")
-const gm = document.querySelector(".gm");
+
 
 
 
