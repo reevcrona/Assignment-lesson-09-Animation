@@ -10,15 +10,30 @@ body{
     animation-fill-mode: forwards;
 }
 
+.header{
+    font-size: 3rem;
+    color: white;
+}
 .moon{
     position: absolute;
     opacity: 0;
+    transition: all 0.4s ease-in-out;
 }
 .sun{
     position: absolute;
     opacity: 0;
+    transition: all 0.4s ease-in-out;
 }
-
+.moon:hover{
+   
+    background-color: blue;
+    border-radius: 50%;
+}
+.sun:hover{
+   
+    background-color: red;
+    border-radius: 50%;
+}
 .move-animation{
     animation: moveSunMoon 10s linear;
     animation-fill-mode: forwards;
